@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/normalize.css">
+    <title>VR</title>
+    <style>
+        * {
+            border: 1px solid coral;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @font-face {
+            font-family: 'Intro';
+            src: url(assets/fonts/IntroDemo-BlackCAPS900.otf);
+            font-weight: 900;
+        }
+
+        @font-face {
+            font-family: 'RobotoSlab';
+            src: url(assets/fonts/RobotoSlab-Light300.ttf);
+            font-weight: 300;
+        }
+
+
+        .container {
+            display: grid;
+            grid-template-columns: 45% 1fr;
+            padding: 2%;
+        }
+
+        .header,
+        .main__title,
+        .button {
+            font-family: 'Intro', Times, sans-serif;
+            font-weight: 900;
+        }
+
+        .main__slogan,
+        .footer {
+            font-family: 'RobotoSlab', Times, sans-serif;
+            font-weight: 300;
+        }
+
+        .header {
+            grid-area: 1/1/2/3;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button_cart {
+            margin-right: 10%;
+        }
+
+        .main {
+            display: contents;
+        }
+
+        .main__title,
+        .main__slogan,
+        .button_buy,
+        .footer {
+            margin-left: 5%;
+        }
+
+        .main__title {
+            grid-area: 2/1/3/2;
+            align-self: flex-end;
+
+            font-size: 3.2em;
+            line-height: 130%;
+        }
+
+        .main__content {
+            grid-area: 3/1/4/2;
+        }
+
+        .main__slogan {
+            line-height: 170%;
+        }
+
+        .button {
+            border-radius: 100px;
+
+            background-color: #5222D0;
+            color: #FFF;
+        }
+
+        .button_buy {
+            padding: 3%;
+            font-size: 1.7em;
+        }
+
+        .button_buy img {
+            margin-left: 5%;
+            width: 20%;
+        }
+
+        .main__image {
+            grid-area: 2/2/5/3;
+        }
+
+        .footer {
+            grid-area: 4/1/5/2;
+        }
+
+        .footer__section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer__section a {
+            color:#5222D0;
+        }
+
+        @media screen and (max-width:767px) {
+            .container {
+                display: flex;
+                flex-flow: column wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+                <img class="header__logo" src="assets/img/logo.svg" alt="логотип с двумя кругами">
+
+            <button class="button button_cart">
+                Корзина
+                <img src="assets/img/cart.svg" alt="иконка корзины">
+            </button>
+        </header>
+
+        <main class="main">
+            <h1 class="main__title">Виртуальная реальность <br/>без проводов</h1>
+            <img class="main__image" src="assets/img/image.svg" alt="парень с пультом управления">
+            <div class="main__content">
+                <p class="main__slogan">Лучшее, что случалось с виртуальным миром <br/> в реальности. Новый компактный шлем <br/> без проводов и дорогих комьютеров.</p>
+                <button class="button button_buy">
+                    Купить
+                    <img src="assets/img/card.svg" alt="иконка банковской карты">
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <section class="footer__section">
+                <a href="#">Возможности</a>
+                <a href="#">Где купить</a>
+                <a href="#">Доставка</a>
+                <a href="#">Помощь</a>
+            </section>
+        </footer>
+    </div>
+</body>
+
+</html>
