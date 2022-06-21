@@ -1,0 +1,165 @@
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Intro';
+    src: url(../fonts/IntroDemo-BlackCAPS900.otf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url(../fonts/RobotoSlab-Light300.ttf);
+    font-weight: 300;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    padding: 2%;
+}
+
+.header,
+.main__title,
+.button {
+    font-family: 'Intro', Times, sans-serif;
+    font-weight: 900;
+}
+
+.main__slogan,
+.footer {
+    font-family: 'RobotoSlab', Times, sans-serif;
+    font-weight: 300;
+}
+
+.header {
+    grid-area: 1/1/2/3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button_cart {
+    margin-right: 10%;
+}
+
+.main {
+    display: contents;
+}
+
+.main__title,
+.main__slogan,
+.button_buy,
+.footer {
+    margin-left: 5%;
+}
+
+.main__title {
+    grid-area: 2/1/3/2;
+    align-self: flex-end;
+
+    font-size: 3.2em;
+    line-height: 130%;
+}
+
+.main__content {
+    grid-area: 3/1/4/2;
+}
+
+.main__slogan {
+    line-height: 170%;
+}
+
+.button {
+    border-radius: 100px;
+
+    background-color: #5222D0;
+    color: #FFF;
+}
+
+.button_buy {
+    padding: 3%;
+    font-size: 1.7em;
+}
+
+.button_buy img {
+    margin-left: 5%;
+    width: 20%;
+}
+
+.main__image {
+    grid-area: 2/2/5/3;
+}
+
+.footer {
+    grid-area: 4/1/5/2;
+}
+
+.footer__section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__section a {
+    color:#5222D0;
+}
+
+@media screen and (max-width:767px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    br {
+        display: none;
+    }
+
+    .header__logo {
+        width: 30%;
+    }
+
+    .button_cart {
+        margin-right: 0;
+    }
+    
+
+    .main__title {
+        font-size: 1.7em;
+    }
+
+    .button_buy {
+        margin-bottom: 8%;
+    }
+
+    .footer {
+        margin-left: 0;
+    }
+
+    .footer__section {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .button_cart {
+        margin-right: 0;
+    }
+
+    .main__title {
+        font-size: 2.5em;
+    }
+
+    .main__image {
+        align-self: center;
+        width: 100%;
+    }
+
+    .footer {
+        margin-top: 5%;
+        margin-left: 0;
+
+        font-size: 0.8em;
+    }
+}
